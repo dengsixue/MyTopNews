@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_news">
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.example.mytopnews.view.fragment.NewsFragment"
+        android:label="@string/title_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_navigation_news_to_navigation_weather"
+            app:destination="@id/navigation_weather" />
+        <action
+            android:id="@+id/action_navigation_news_to_navigation_joke"
+            app:destination="@id/navigation_joke" />
+        <action
+            android:id="@+id/action_navigation_news_to_navigation_mine"
+            app:destination="@id/navigation_mine" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_weather"
+        android:name="com.example.mytopnews.view.fragment.WeatherFragment"
+        android:label="@string/title_weather"
+        tools:layout="@layout/fragment_weather" />
+
+    <fragment
+        android:id="@+id/navigation_joke"
+        android:name="com.example.mytopnews.view.fragment.JokeFragment"
+        android:label="@string/title_joke"
+        tools:layout="@layout/fragment_joke" />
+
+    <fragment
+        android:id="@+id/navigation_mine"
+        android:name="com.example.mytopnews.view.fragment.MineFragment"
+        android:label="@string/title_mine"
+        tools:layout="@layout/fragment_mine" />
+</navigation>

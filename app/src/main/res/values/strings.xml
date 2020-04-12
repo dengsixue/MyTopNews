@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">新闻</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_news">NewsActivity</string>
+    <string name="title_news">news</string>
+    <string name="title_weather">weather</string>
+    <string name="title_joke">joke</string>
+    <string name="title_mine">mine</string>
+    <string name="error">网络出现问题</string>
+    <string-array name="types">
+        <item>头条</item>
+        <item>社会</item>
+        <item>国内</item>
+        <item>国际</item>
+        <item>娱乐</item>
+        <item>体育</item>
+        <item>军事</item>
+        <item>科技</item>
+        <item>财经</item>
+        <item>时尚</item>
+    </string-array>
+
+</resources>
