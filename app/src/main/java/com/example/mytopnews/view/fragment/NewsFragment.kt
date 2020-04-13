@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.mytopnews.R
 import com.example.mytopnews.adapter.NewsTypeFragmentPagesAdapter
@@ -52,15 +53,20 @@ class NewsFragment : Fragment() {
 
 //        newsViewModel = ViewModelProvider(this).get(NewsViewModel::class.java)
 
-        val root = inflater.inflate(R.layout.fragment_news, container, false)
-        val mPager=root.findViewById<ViewPager2>(R.id.viewPager)
+        val root = inflater.inflate(R.layout.fragment_news, container,false)
+        val mPager=root.findViewById<ViewPager>(R.id.viewPager)
         val tabLayout=root.findViewById<TabLayout>(R.id.type_table)
-        mPager?.adapter=NewsTypeFragmentPagesAdapter(this,array)
-//        mPager.offscreenPageLimit=2
-        TabLayoutMediator(tabLayout,mPager){tab, position ->
-            tab.text=typeList[position]
-        }.attach()
+        mPager?.adapter=NewsTypeFragmentPagesAdapter(activity!!.supportFragmentManager,array,typeList)
 
+        tabLayout.setupWithViewPager(mPager)
+        /**
+         * viewPager2操作
+         *
+         * **/
+//        mPager.offscreenPageLimit=2
+//        TabLayoutMediator(tabLayout,mPager){tab, position ->
+//            tab.text=typeList[position]
+//        }.attach()
 //        tabLayout.run {
 //            setupWithViewPager2(mPager)
 //            addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {

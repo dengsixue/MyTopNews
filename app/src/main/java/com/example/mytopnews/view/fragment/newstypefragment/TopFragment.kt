@@ -45,7 +45,6 @@ import org.jetbrains.anko.support.v4.act
 @Suppress("UNCHECKED_CAST")
 class TopFragment(private var i:Int,val types:String) :Fragment() {
     private lateinit var newsListViewModel: TopFragmentViewModel
-    private lateinit var mAdapter: NewsTypeFragmentPagesAdapter
     private lateinit var rv: RecyclerView
     private lateinit var linearLayout: LinearLayout
     private lateinit var progressBar: ProgressBar
@@ -59,7 +58,7 @@ class TopFragment(private var i:Int,val types:String) :Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root=inflater.inflate(R.layout.fragment_type_base,container,true)
+        val root=inflater.inflate(R.layout.fragment_type_base,container,false)
         //获取ViewModel
         newsListViewModel = ViewModelProvider(this,object :ViewModelProvider.Factory{
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {

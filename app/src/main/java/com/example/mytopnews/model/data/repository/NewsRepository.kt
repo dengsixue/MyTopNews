@@ -26,7 +26,7 @@ class NewsRepository {
         val sourceFactory = NewsDataSourceFactory(type)
         val config = PagedList.Config.Builder()
             .setPageSize(PAGE_SIZE)
-            .setInitialLoadSizeHint(PAGE_SIZE * 2)
+            .setInitialLoadSizeHint(PAGE_SIZE)//设置初始加载大小
             .setEnablePlaceholders(false)
             .build()
         val livePageList = LivePagedListBuilder<String,News>(sourceFactory,config).build()

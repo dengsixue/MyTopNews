@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource
 import java.util.concurrent.Executor
 
-class NewsDataSourceFactory(val str: String="top"): DataSource.Factory<String, News>() {
+class NewsDataSourceFactory(private val str: String="top"): DataSource.Factory<String, News>() {
     val sourceLiveData = MutableLiveData<NewsDataSource>()
     override fun create(): DataSource<String, News>{
         val source = NewsDataSource(str)
