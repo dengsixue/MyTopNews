@@ -22,8 +22,9 @@ open class WebBaseActivity : SwipeBackActivity() {
         mSwipeBackLayout?.setEdgeTrackingEnabled(SwipeBackLayout.EDGE_LEFT)
 
         // 滑动退出的效果只能从边界滑动才有效果，如果要扩大touch的范围，可以调用这个方法
-        val resources:Resources=this.resources
-        val dm:DisplayMetrics=resources.displayMetrics
-        mSwipeBackLayout?.setEdgeSize(dm.widthPixels/2)
+//        val resources:Resources=this.resources
+//        val dm:DisplayMetrics=resources.displayMetrics
+//        mSwipeBackLayout?.setEdgeSize(dm.widthPixels/2)
     }
+
 }

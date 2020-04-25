@@ -15,11 +15,12 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/type_table"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabIndicatorColor="@color/appColor"
+            android:layout_height="30dp"
+            android:background="@color/appColor"
+            app:tabIndicatorColor="@color/white"
+            app:tabGravity="center"
             app:tabMode="scrollable"
-            app:tabTextColor="#000000"
-            app:tabSelectedTextColor="@color/appColor">
+            android:theme="@style/AppTheme.AppBarOverlay">
         </com.google.android.material.tabs.TabLayout>
 
     </androidx.viewpager.widget.ViewPager>

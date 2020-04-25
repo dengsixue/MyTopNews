@@ -9,6 +9,11 @@
     <string name="title_joke">joke</string>
     <string name="title_mine">mine</string>
     <string name="error">网络出现问题</string>
+    <string name="news">新闻</string>
+    <string name="weather">疫情</string>
+    <string name="joke">笑话</string>
+    <string name="mine">我的</string>
+    <string name="loading">加载中…</string>
     <string-array name="types">
         <item>头条</item>
         <item>社会</item>
