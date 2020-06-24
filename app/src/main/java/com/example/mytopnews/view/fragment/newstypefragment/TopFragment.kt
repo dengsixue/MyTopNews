@@ -77,6 +77,7 @@ class TopFragment(private var i:Int,val types:String) :Fragment() {
 
         progressBar.visibility=View.VISIBLE
         //下拉刷新
+        swipeRefresh.setColorSchemeResources(R.color.appColor)
         swipeRefresh.setOnRefreshListener {
             swipeRefresh.isRefreshing=true
             newsListViewModel.refresh()

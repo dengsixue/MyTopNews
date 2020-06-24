@@ -3,11 +3,23 @@ package com.example.mytopnews.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.mytopnews.model.data.repository.NewsRepository
 
-class JokeViewModel : ViewModel() {
+class JokeViewModel(private val newsRespository: NewsRepository) : ViewModel(){
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+    private val mData = newsRespository.getNews(type)
+
+    val newsList = mData.pagedList
+
+    val netWorkState = mData.networkState
+
+    val refreshState = mData.refreshState
+
+    fun refresh() {
+        mData.refresh.invoke()
     }
-    val text: LiveData<String> = _text
+
+    fun retry() {
+        mData.retry.invoke()
+    }
 }

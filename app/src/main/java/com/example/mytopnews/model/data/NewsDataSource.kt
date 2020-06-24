@@ -40,7 +40,7 @@ class NewsDataSource(val string: String) :ItemKeyedDataSource<String,News>() {
             .subscribe (
                 {
                     //获得数据
-                        t: HttpResponse? -> callback.onResult(t?.result?.data!!)
+                        t: HttpResponse<News>? -> callback.onResult(t?.result?.data!!)
                     //设置状态为已完成
                         initialLoad.postValue(NetworkState.LOADED)
                         netWorkState.postValue(NetworkState.LOADED)
@@ -59,7 +59,7 @@ class NewsDataSource(val string: String) :ItemKeyedDataSource<String,News>() {
             .subscribeOn(Schedulers.newThread())
             .subscribe (
                 {
-                    t: HttpResponse? -> callback.onResult(t?.result?.data!!)
+                    t: HttpResponse<News>? -> callback.onResult(t?.result?.data!!)
                     netWorkState.postValue(NetworkState.LOADED)},
                 {
                     netWorkState.postValue(NetworkState.FAILED)

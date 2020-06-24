@@ -16,8 +16,9 @@
             android:id="@+id/type_table"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:background="@color/appColor"
-            app:tabIndicatorColor="@color/white"
+            android:background="@color/white"
+            app:tabTextColor="@color/black"
+            app:tabIndicatorColor="@color/appColor"
             app:tabGravity="center"
             app:tabMode="scrollable"
             android:theme="@style/AppTheme.AppBarOverlay">

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="5dp"
+    android:translationZ="5dp"
+    app:cardCornerRadius="5dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:text="我拉送快递女偶闹闹奥斯你都不号你搜安东尼佛阿森纳的佛阿斯蒂芬纳思达 阿斯蒂芬加速度计覅全文及二级"
+        />
+    <TextView
+        android:id="@+id/updatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="sadfasdfsafd"
+        />
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>

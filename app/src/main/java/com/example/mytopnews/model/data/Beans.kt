@@ -4,9 +4,9 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-data class HttpResponse(
+data class HttpResponse<T>(
     var reason:String,
-    var result:com.example.mytopnews.model.data.Result,
+    var result:com.example.mytopnews.model.data.Result<T>,
     var error_code:Int
 )
 
@@ -30,7 +30,13 @@ data class News(
 
     val url: String
 )
-data class Result(
+data class Joke(
+    val content:String,
+    val hashId:String,
+    val unixtime:Long,
+    val updatetime:String
+)
+data class Result<T>(
     var stat:String,
-    var data:ArrayList<News>
+    var data:ArrayList<T>
 )

@@ -61,7 +61,8 @@ class NewsFragment : Fragment() {
         tabLayout.setupWithViewPager(mPager)
         /**
          * viewPager2操作
-         *
+         *进行滑动操作的时候，也可以接收到另外的滑动操作？？？
+         * 比如说上滑时还可以左右滑？？？
          * **/
 //        mPager.offscreenPageLimit=2
 //        TabLayoutMediator(tabLayout,mPager){tab, position ->

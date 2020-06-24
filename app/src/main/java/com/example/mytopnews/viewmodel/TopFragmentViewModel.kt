@@ -5,7 +5,7 @@ import com.example.mytopnews.model.data.repository.NewsRepository
 
 class TopFragmentViewModel (
     private val newsRespository: NewsRepository,
-     type:String
+    type:String
     ) : ViewModel() {
 
         private val mData = newsRespository.getNews(type)
