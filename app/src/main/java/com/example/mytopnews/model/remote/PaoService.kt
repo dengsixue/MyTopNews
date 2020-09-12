@@ -31,7 +31,9 @@ interface PaoService {
     fun getNcovData():Observable<Data>
 
     @GET("joke/content/list.php")
-    fun getJokes(@Query("sort")sort:String,//类型，desc:指定时间之前发布的，asc:指定时间之后发布的
+    fun getJokes(
+                 @Query("key")key:String,
+                 @Query("sort")sort:String,//类型，desc:指定时间之前发布的，asc:指定时间之后发布的
                  @Query("page")page:Int,//当前页数,默认1,最大20
                  @Query("pagesize")pageSize:Int,//每次返回条数,默认1,最大20
                  @Query("time")time:String):Observable<HttpResponse<Joke>>//时间戳（10位），如：1418816972

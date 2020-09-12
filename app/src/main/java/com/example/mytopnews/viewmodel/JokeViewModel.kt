@@ -3,11 +3,12 @@ package com.example.mytopnews.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.mytopnews.model.data.repository.JokesRepository
 import com.example.mytopnews.model.data.repository.NewsRepository
 
-class JokeViewModel(private val newsRespository: NewsRepository) : ViewModel(){
+class JokeViewModel(private val jokesRepository: JokesRepository,time:String) : ViewModel(){
 
-    private val mData = newsRespository.getNews(type)
+    private val mData = jokesRepository.getJokes(time)
 
     val newsList = mData.pagedList
 

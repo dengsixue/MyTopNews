@@ -15,4 +15,5 @@ object RemoteData{
         const val BASE_URL = "http://v.juhe.cn/"
         const val APILINK_BASE_URL="https://api.yonyoucloud.com/"
         const val APILINK_KEY="ce1601c5bcce4fdfadd81daeb40c7020"
+        const val APIJOKE_KEY="9142adfdc93fcb79e14281fc37963a58"
     }
